@@ -20,6 +20,16 @@ export const generate_random_id = (): string => {
   return id;
 }
 
-export const remove_element_by_value = (arr: any[], value_to_remove: any): any[] => {
+export const remove_elements_and_create_new_arr = (arr: any[], value_to_remove: any): any[] => {
   return arr.filter(element => element !== value_to_remove);
+}
+
+export const remove_elements_from_existing_array = (arr: any, valueToRemove: any): void => {
+  // Loop through the array backwards
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] === valueToRemove) {
+      // Remove the element if it matches the value to remove
+      arr.splice(i, 1);
+    }
+  }
 }
