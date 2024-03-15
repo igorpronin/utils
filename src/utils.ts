@@ -20,6 +20,6 @@ export const generate_random_id = (): string => {
   return id;
 }
 
-export const remove_element_by_value = (arr: string[], value_to_remove: string): string[] => {
+export const remove_element_by_value = (arr: any[], value_to_remove: string): any[] => {
   return arr.filter(element => element !== value_to_remove);
 }
