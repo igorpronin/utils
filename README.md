@@ -31,7 +31,7 @@ Creates a new array with all elements that are not equal to the specified value.
 Removes all occurrences of a specified value from an existing array.
 
 - `arr`: The array to modify.
-- `valueToRemove`: The value to remove from the array.
+- `value_to_remove`: The value to remove from the array.
 - Note: This function modifies the original array in place.
 
 ## Usage

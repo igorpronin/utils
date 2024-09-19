@@ -33,3 +33,22 @@ export const remove_elements_from_existing_array = (arr: any, value_to_remove: a
     }
   }
 }
+
+export const generate_word_id = (wordCount: number = 4): string => {
+  const wordList = [
+    'cat', 'dog', 'fish', 'bird', 'tree', 'flower', 'sun', 'moon', 'star', 'cloud',
+    'river', 'mountain', 'ocean', 'forest', 'desert', 'island', 'city', 'village', 'house', 'car',
+    'book', 'pen', 'computer', 'phone', 'table', 'chair', 'window', 'door', 'road', 'bridge',
+    'shoe', 'hat', 'shirt', 'pants', 'cup', 'plate', 'fork', 'spoon', 'knife', 'bed',
+    'pillow', 'blanket', 'clock', 'watch', 'camera', 'music', 'song', 'dance', 'paint', 'color'
+  ];
+
+  if (wordCount > wordList.length) {
+    throw new Error(`Cannot generate ID with ${wordCount} unique words. Maximum is ${wordList.length}.`);
+  }
+
+  const shuffled = [...wordList].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, wordCount).join('-');
+}
+
+
