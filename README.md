@@ -34,6 +34,14 @@ Removes all occurrences of a specified value from an existing array.
 - `value_to_remove`: The value to remove from the array.
 - Note: This function modifies the original array in place.
 
+### `generate_word_id(word_count: number = 4): string`
+
+Generates a random ID using real English words.
+
+- `word_count`: Optional. The number of words to use in the ID. Defaults to 4.
+- Returns: A string of random words joined by hyphens.
+- Note: Throws an error if `word_count` exceeds the number of available unique words.
+
 ## Usage
 
 To use these functions in your project, import them from the utils or index file:
